@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate Account</title>
+</head>
+<body>
+<script>
+    function validate(str) {
+        var regexp = /^[_a-z0-9]{6,}$/;
+        var result = regexp.test(str);
+        if (result){
+            console.log("OK")
+        }else {
+            console.log("Retype");
+        }
+    }
+
+    var account1 = "123abc_";
+    var account2 = "______";
+    var account3 = ".@";
+    var account4 ="123456";
+    var account5 = "abcde";
+    var account6 = "abcderfddfa";
+    validate(account1);
+    validate(account2);
+    validate(account3);
+    validate(account4);
+    validate(account5);
+    validate(account6);
+</script>
+</body>
+</html>
